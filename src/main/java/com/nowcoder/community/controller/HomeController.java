@@ -17,7 +17,6 @@ import java.io.PrintWriter;
 import java.util.*;
 
 @Controller
-@RequestMapping(path = "/home")
 public class HomeController{
 
 
@@ -30,7 +29,7 @@ public class HomeController{
     @RequestMapping(path = "/index", method = RequestMethod.GET)
     public String getIndexPage(Model model, Page page){
         page.setRows(discussPostService.findDiscussPostRows(0));
-        page.setPath("/home/index");
+        page.setPath("index");
 
         List<DiscussPost> list = discussPostService.findDiscussPosts(0,page.getOffset(),page.getLimit());
         List<Map<String,Object>> discussPots = new ArrayList<>();
