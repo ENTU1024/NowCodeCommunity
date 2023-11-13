@@ -17,7 +17,7 @@ public class MailClient {
     @Resource
     private JavaMailSender mailSender;
 
-    //引进我们的邮件发送方
+    //引进我们的邮件发送方 其实应该为@Value("${spring.mail.username}")
     @Value("${spring.mail.username}")
     private String from;
 

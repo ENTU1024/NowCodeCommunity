@@ -15,4 +15,9 @@ public interface DiscussPostMapper {
     //但如果只有一个参数，并且在<if>里使用，则必须加上别名
     //一个可能有多少页
     int selectDiscussPostRows (@Param("userId") int userId);
+
+    int insertDiscussPost(DiscussPost discussPost);
+
+    DiscussPost selectDiscussPostById(int id);
+    int updateCommentCount(int id, int commentCount);
 }

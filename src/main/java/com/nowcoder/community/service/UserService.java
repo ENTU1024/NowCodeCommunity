@@ -93,6 +93,7 @@ public class UserService implements CommunityConstant {
         userMapper.insertUser(user);
 
         //激活邮件
+        //package org.thymeleaf.context;
         Context context = new Context();
         context.setVariable("email", user.getEmail());
         String url = domain + contextPath + "/activation/" + user.getId() + "/" + user.getActivationCode();
@@ -189,5 +190,9 @@ public class UserService implements CommunityConstant {
         }
         String md5Password = CommunityUtil.md5(password + user.getSalt());
         return userMapper.updatePassword(id, md5Password);
+    }
+
+    public User findUserByName(String name){
+        return userMapper.selectByName(name);
     }
 }
