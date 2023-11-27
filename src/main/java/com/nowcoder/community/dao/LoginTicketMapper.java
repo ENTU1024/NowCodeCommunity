@@ -4,6 +4,8 @@ import com.nowcoder.community.util.LoginTicket;
 import org.apache.ibatis.annotations.*;
 
 @Mapper
+@Deprecated
+//不推荐使用
 public interface LoginTicketMapper {
 
     //注解动态sql语句后要空一格
