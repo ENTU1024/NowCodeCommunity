@@ -43,6 +43,11 @@ public interface CommunityConstant {
     String TOPIC_COMMENT = "comment";
 
     /*
+    * 主题: 发帖
+    * */
+    String TOPIC_PUBLISH = "publish";
+
+    /*
     * 主题：点赞
     * */
     String TOPIC_LIKE = "like";
